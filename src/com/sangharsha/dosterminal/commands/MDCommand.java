@@ -13,7 +13,6 @@ public class MDCommand extends DosCommand {
 			file.mkdir();
 		} else {
 			System.out.println("The syntax of the command is incorrect");
-
 		}
 		return path;
 	}
