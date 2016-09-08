@@ -1,6 +1,7 @@
 package com.sangharsha.dosterminal.interfaces;
 
 import com.sangharsha.dosterminal.commands.CDCommand;
+import com.sangharsha.dosterminal.commands.ClearCommand;
 import com.sangharsha.dosterminal.commands.CopyCommand;
 import com.sangharsha.dosterminal.commands.DirCommand;
 import com.sangharsha.dosterminal.commands.MDCommand;
@@ -25,7 +26,9 @@ public class DosCommandFactory {
 			return new TypeCommand();
 		} else if (key.equalsIgnoreCase("dir")) {
 			return new DirCommand();
-		} else{
+		} else if (key.equalsIgnoreCase("clear")) {
+			return new ClearCommand();
+		}else{
 			return null;
 		}
 	}
