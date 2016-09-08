@@ -10,6 +10,3 @@
 |   `rd directory_name`    |  Delete directory   |
 |  `rename name`  | rename file and directories name |
 |   `type filename`|  show the content of the file  |
-
-
-> Dir Command Attributes:
