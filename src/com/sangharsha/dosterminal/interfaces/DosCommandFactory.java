@@ -4,6 +4,7 @@ import com.sangharsha.dosterminal.commands.CDCommand;
 import com.sangharsha.dosterminal.commands.ClearCommand;
 import com.sangharsha.dosterminal.commands.CopyCommand;
 import com.sangharsha.dosterminal.commands.DirCommand;
+import com.sangharsha.dosterminal.commands.DownloadCommand;
 import com.sangharsha.dosterminal.commands.MDCommand;
 import com.sangharsha.dosterminal.commands.RDCommand;
 import com.sangharsha.dosterminal.commands.RenameCommand;
@@ -26,6 +27,8 @@ public class DosCommandFactory {
 			return new TypeCommand();
 		} else if (key.equalsIgnoreCase("dir")) {
 			return new DirCommand();
+		} else if (key.equalsIgnoreCase("download")) {
+			return new DownloadCommand();
 		} else if (key.equalsIgnoreCase("clear")) {
 			return new ClearCommand();
 		}else{
