@@ -26,7 +26,7 @@ public class Main {
 				if (cmd != null) {
 					path = cmd.execute(tokens, path);
 				} else {
-					System.out.println("" + tokens[0] + "is not recognized as internal or external command");
+					System.out.println("" + tokens[0] + " is not recognized as internal or external command");
 				}
 
 				System.out.print(path + ">");

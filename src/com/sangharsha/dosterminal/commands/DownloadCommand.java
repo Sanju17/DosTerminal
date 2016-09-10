@@ -30,23 +30,23 @@ public class DownloadCommand extends DosCommand {
 		}else if(params.length == 2){
 			try {
 				downloadFile(params[1]);
-				System.out.println("Download Completed!!!");
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
+			System.out.println("Download Completed !!!");
 		}else if(params.length == 3){
 			if(params[1].equals("-f")){
+				int count = 0;
 				try {
 					FileInputStream fstream = new FileInputStream(params[2]);
 					BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
 	
 					String strLine;
-	
 					//Read File Line By Line
 					while ((strLine = br.readLine()) != null)   {
 						downloadFile(strLine);
+						count++;
 					}
-					System.out.println("Download Completed!!!");
 	
 					//Close the input stream
 					br.close();
@@ -55,6 +55,8 @@ public class DownloadCommand extends DosCommand {
 				} catch (IOException e) {
 					System.out.println(e.getMessage());
 				}
+
+				System.out.println(count + " File(s) Downloaded!!!");
 			}else {
 				System.out.println("Did you mean: download -f filename");
 			}
