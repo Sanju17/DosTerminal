@@ -11,7 +11,6 @@ import com.sangharsha.dosterminal.interfaces.DosCommandFactory;
 public class Main {
 
 	public static void main(String[] args) {
-		String fileName = "C:/Users/home/desktop/java/sample.txt";
 
 		try {
 			File pwd = new File(".");

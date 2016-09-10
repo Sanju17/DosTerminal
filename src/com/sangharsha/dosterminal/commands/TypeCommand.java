@@ -20,6 +20,7 @@ public class TypeCommand extends DosCommand{
 	    		 while ((line = br.readLine()) != null) {
 	    		   System.out.println(line);
 	    		 }
+	    		 br.close();
 	    	}else {
 	    		System.out.println("File not exist");
 	    	}

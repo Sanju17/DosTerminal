@@ -13,7 +13,6 @@ public class CDCommand extends DosCommand{
 
     @Override
     public String execute(String[] params, String path) {
-    	String separator = File.separator;
     	if(params.length > 1 && params.length < 3){
     		if(params[1].equals("..")){
     			List<String> myList = new ArrayList<String>(Arrays.asList(path.split(CommonConstants.REGEX_SEPERATOR)));
